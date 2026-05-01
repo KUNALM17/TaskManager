@@ -4,10 +4,5 @@
     "builder": "DOCKERFILE",
     "dockerfilePath": "backend/Dockerfile",
     "context": "backend"
-  },
-  "deploy": {
-    "startCommand": "java -Dserver.port=${PORT} -jar app.jar",
-    "healthcheckPath": "/api/auth/signin",
-    "restartPolicyType": "ON_FAILURE"
   }
 }
