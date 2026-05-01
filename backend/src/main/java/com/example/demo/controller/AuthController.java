@@ -77,15 +77,15 @@ public class AuthController {
         Role role;
 
         if (strRole == null) {
-            role = Role.ROLE_MEMBER; // default role
+            role = Role.ROLE_USER; // default role
         } else {
             switch (strRole.toLowerCase()) {
                 case "admin":
                     role = Role.ROLE_ADMIN;
                     break;
-                case "member":
+                case "user":
                 default:
-                    role = Role.ROLE_MEMBER;
+                    role = Role.ROLE_USER;
             }
         }
 

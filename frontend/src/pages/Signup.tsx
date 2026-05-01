@@ -4,7 +4,7 @@ import api from '../api/axios';
 import { Mail, Lock, User, ArrowRight, UserCheck, ShieldCheck, Loader2 } from 'lucide-react';
 
 const Signup = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', password: '', role: 'member' });
+  const [formData, setFormData] = useState({ name: '', email: '', password: '', role: 'user' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -90,9 +90,9 @@ const Signup = () => {
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Role Type</label>
                 <div className="grid grid-cols-2 gap-4">
-                    <label className={`cursor-pointer rounded-xl border p-4 flex flex-col items-center justify-center transition-all ${formData.role === 'member' ? 'border-indigo-600 bg-indigo-50 text-indigo-700' : 'border-slate-200 text-slate-500 hover:border-slate-300 bg-white'}`}>
-                        <input type="radio" name="role" value="member" checked={formData.role === 'member'} onChange={handleChange} className="sr-only" />
-                        <UserCheck className={`w-6 h-6 mb-2 ${formData.role === 'member' ? 'text-indigo-600' : 'text-slate-400'}`} />
+                    <label className={`cursor-pointer rounded-xl border p-4 flex flex-col items-center justify-center transition-all ${formData.role === 'user' ? 'border-indigo-600 bg-indigo-50 text-indigo-700' : 'border-slate-200 text-slate-500 hover:border-slate-300 bg-white'}`}>
+                        <input type="radio" name="role" value="user" checked={formData.role === 'user'} onChange={handleChange} className="sr-only" />
+                        <UserCheck className={`w-6 h-6 mb-2 ${formData.role === 'user' ? 'text-indigo-600' : 'text-slate-400'}`} />
                         <span className="text-sm font-medium">Team Member</span>
                     </label>
                     <label className={`cursor-pointer rounded-xl border p-4 flex flex-col items-center justify-center transition-all ${formData.role === 'admin' ? 'border-indigo-600 bg-indigo-50 text-indigo-700' : 'border-slate-200 text-slate-500 hover:border-slate-300 bg-white'}`}>
