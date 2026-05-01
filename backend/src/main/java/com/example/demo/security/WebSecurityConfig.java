@@ -84,6 +84,7 @@ public class WebSecurityConfig {
             "http://localhost:*", 
             "http://127.0.0.1:*",
             "https://*.railway.app",
+            "https://*.up.railway.app",
             "https://*.vercel.app"
         ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
